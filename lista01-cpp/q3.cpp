@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 double potencia_double(double base, int expoente) {
@@ -39,16 +40,24 @@ class Circulo {
 };
 
 int main() {
-    double diametro_double;
-    float diametro_float;
+    double diametro_double = 0;
+    float diametro_float = 0;
     cout << "Informe o diametro (Double): ";
     cin >> diametro_double;
     cout << "Informe o diametro (float): ";
     cin >> diametro_float;
 
     Circulo circulo1(diametro_double, diametro_float);
-    double res = circulo1.area_double();
 
-    cout << res << endl;
+    if (diametro_float == 0) {
+        cout << "Double" << endl;
+        double res = circulo1.area_double();
+        cout << fixed << setprecision(5) << res << endl;
+    } else if (diametro_double == 0) {
+        cout << "Float" << endl;
+        float res = circulo1.area_float();
+        cout << fixed << setprecision(5) << res << endl;
+    };
+
     return 0;
 }
