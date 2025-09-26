@@ -1,26 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int calcula_maior(int a, int b) {
-    if (a < b) {
-        return b;
-    } else {
-        return a;
-    };
-}
-
-int calcula_menor(int a, int b){
-    if (a < b) {
-        return a;
-    } else {
-        return b;
-    }
-}
-
 int calcula_mdc(int a, int b){
     int mdc, maior, menor, resto;
-    maior = calcula_maior(a, b);
-    menor = calcula_menor(a, b);
+    maior = a;
+    menor = b;
     resto = maior % menor;
 
     while (resto != 0) {
@@ -34,8 +18,14 @@ int calcula_mdc(int a, int b){
 }
 
 int main() {
-    int a, b, mdc;
+    int a, b, mdc, maior, menor;
     cin >> a >> b;
+    maior = b;
+    menor = a;
+    if (a > b) {
+        maior = a;
+        menor = b;
+    };
     mdc = calcula_mdc(a, b);
     cout << mdc << endl;
 
