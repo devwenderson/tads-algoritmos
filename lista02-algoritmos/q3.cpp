@@ -2,15 +2,15 @@
 using namespace std;
 
 int maior_diferenca(int a[], int tam) {
-    int maior = 0;
+    int maior = 0; // 1
 
-    for (int i = 1; i < tam; ++i) {
-        if (a[i-1] + a[i] > maior) {
-            maior = a[i-1] + a[i];
+    for (int i = 1; i < tam; ++i) {  // 1 + n + 2n = 1 + 3n
+        if (a[i-1] + a[i] > maior) { // n + 2n + 3n = 6n
+            maior = a[i-1] + a[i]; // n + 2n + 2n = 5n
         };
     }
 
-    return maior;
+    return maior; // 1
 }
 
 int main() {
