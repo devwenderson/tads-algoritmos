@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int maior_lista_contigua(int a[], int n) {
+int maior_lista_contigua(int a[], int n, int b[]) {
     int maior_lista = a[0];
 
     for (int i=0; i<n; i++) {
@@ -21,9 +21,10 @@ int main() {
     int n;
     cin >> n;
     int a[n];
+    int b[n];
     for (int i=0; i<n; i++) 
         cin >> a[i];
-    int maior_lista = maior_lista_contigua(a, n);
+    int maior_lista = maior_lista_contigua(a, n, b);
     cout << maior_lista << endl;
     return 0;
 }

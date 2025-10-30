@@ -1,2 +1,8 @@
-*** stack smashing detected ***: terminated
-*** stack smashing detected ***: terminated
+1759723596
+1772876048
+1245564367
+1955376455
+2135622433
+1651076199
+32766
+1921100547
